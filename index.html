@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Personal Website</title>
+	<style>
+		body { font-family: Arial, Helvetica, sans-serif; margin:0; padding:0; background:#f7f7f7; color:#222; }
+		.container { max-width:900px; margin:40px auto; padding:24px; background:#fff; box-shadow:0 2px 8px rgba(0,0,0,.06); }
+		header p { margin-top:4px; color:#555 }
+		#contact-form { margin-top:12px }
+		#contact-form form { display:flex; flex-direction:column; gap:10px }
+		#contact-form input[type="email"],
+		#contact-form textarea { padding:10px; border:1px solid #ccc; border-radius:6px; font-size:14px; }
+		#contact-form textarea { min-height:120px; resize:vertical }
+		#contact-form button { padding:10px 16px; border:none; background:#0078d4; color:#fff; border-radius:6px; cursor:pointer; }
+		#contact-form button:hover { background:#0060a8 }
+		footer { margin-top:20px; color:#777; font-size:14px }
+	</style>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>Welcome</h1>
+			<p>Simple static page with a contact form powered by Formspree.</p>
+		</header>
+
+		<main>
+			<section id="contact">
+				<h2>Get in Touch</h2>
+				<div id="contact-form">
+					<form action="https://formspree.io/mpzyqdng" method="POST">
+						<input type="hidden" name="_subject" value="Contact request from personal website" />
+						<input type="email" name="_replyto" placeholder="Your email" required>
+						<textarea name="message" placeholder="Type your message" required></textarea>
+						<button type="submit">Send</button>
+					</form>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<p>© 2026</p>
+		</footer>
+	</div>
+</body>
+</html>
